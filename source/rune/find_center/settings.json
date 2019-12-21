@@ -1,0 +1,18 @@
+{
+    "methods":{
+        "CCOEFF": "cv.TM_CCOEFF",
+        "CCOEFF_NORMED": "cv.TM_CCOEFF_NORMED",
+        "CCORR": "cv.TM_CCORR",
+        "CCORR_NORMED": "cv.TM_CCORR_NORMED",
+        "SQDIFF" : "cv.TM_SQDIFF", 
+        "SQDIFF_NORMED": "cv.TM_SQDIFF_NORMED"
+    },
+    "method": "CCOEFF",
+    "edge_matching": 0,
+    "filters": {
+        "smallest_scale": 0.5,
+        "largest_scale": 2.0,
+        "number_of_filters": 20
+    },
+    "draw":0
+}
