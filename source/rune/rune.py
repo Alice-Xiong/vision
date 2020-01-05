@@ -22,4 +22,4 @@ class Rune(Module):
         cropped, left, top = self.preprocess.process(frame, self.rune_center)
         prediction = self.predict_target.process(cropped)
         if prediction is not None:
-            return prediction[0] + left, prediction[1] + top
+            return (prediction[0] + left, prediction[1] + top), self.properties["distance"]

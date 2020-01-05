@@ -8,7 +8,7 @@ from source.rune.rune import Rune
 def display_target(frame, point):
     # Display the resulting image
     if point is not None:
-        cv2.circle(frame, (int(point[0]), int(point[1])), 5, (0, 0, 255), -1)
+        cv2.circle(frame, (int(point[0][0]), int(point[0][1])), 5, (0, 0, 255), -1)
     cv2.imshow('Press q to quit', frame)
 
 

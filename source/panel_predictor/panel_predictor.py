@@ -2,7 +2,7 @@ from source.module import Module
 from pathlib import Path
 import os
 from .panel_finder.panel_finder import PanelFinder
-import time
+from time import process_time as time
 
 
 class PanelPredictor(Module):
@@ -22,9 +22,9 @@ class PanelPredictor(Module):
         panel = self.panel_finder.process(frame)
         if panel is not None:
             panel, confidence = panel
-            if len(self.past_targets) == self.properties["reference_frames"]:
+            self.past_targets.append((panel["x_center"], panel["y_center"], time(), confidence))
+            if len(self.past_targets) > self.properties["reference_frames"]:
                 self.past_targets.pop(0)
-            self.past_targets.append((panel["x_center"], panel["y_center"], time.time(), confidence))
         if len(self.past_targets) == self.properties["reference_frames"]:
             if self.properties["prediction_type"] == "linear":
                 return self.linear_prediction(frame)
@@ -32,7 +32,7 @@ class PanelPredictor(Module):
     def linear_prediction(self, frame):
         frame_size = ((frame.shape[0]) ** 2 + (frame.shape[1]) ** 2) ** (1 / 2)
         velocity, distance_confidence = self.average_velocity(frame_size)
-        foresight_time = time.time() - self.past_targets[-1][2] + self.properties["seconds_ahead"]
+        foresight_time = time() - self.past_targets[-1][2] + self.properties["seconds_ahead"]
         prediction = (round(self.past_targets[-1][0] + velocity[0] * foresight_time),
                       round(self.past_targets[-1][1] + velocity[1] * foresight_time))
         foresight_confidence = (1 / (foresight_time * self.properties["time_confidence_falloff"] + 1))
@@ -48,7 +48,7 @@ class PanelPredictor(Module):
             pointB = self.past_targets[i + 1]
             deltaX = pointB[0] - pointA[0]
             deltaY = pointB[1] - pointA[1]
-            deltaT = pointB[2] - pointA[2]
+            deltaT = pointB[2] - pointA[2] + 0.005
             distance = (deltaX ** 2 + deltaY ** 2) ** (1 / 2) / max_distance
             avg_velocity[0] += deltaX / deltaT / data_points
             avg_velocity[1] += deltaY / deltaT / data_points

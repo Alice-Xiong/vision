@@ -1,6 +1,7 @@
 from source.panel_predictor.panel_finder.panel_finder import PanelFinder
 import argparse
 import cv2
+import time
 
 
 def display_frame(frame, panel=None):
@@ -15,10 +16,13 @@ def run_video(framework, capture):
     if not ret:
         raise FileNotFoundError("input not found")
     while ret:
+        frame = cv2.pyrDown(frame)
+        t = time.time()
         panel = panel_finder.process(frame)
+        print(1 / (time.time() - t))
         display_frame(frame, panel)
 
-        if cv2.waitKey(1) & 0xFF == ord('q'):  # press q to quit
+        if cv2.waitKey(0) & 0xFF == ord('q'):  # press q to quit
             break
         # get next frame
         ret, frame = capture.read()

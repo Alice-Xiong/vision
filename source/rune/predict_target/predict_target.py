@@ -26,20 +26,17 @@ class PredictTarget(Module):
         if angles:
             angle = self.get_activating_angle(angles)
             if angle is None:
-                self.frames_calculated = 0
-                self.angles = []
                 return None
             self.angles.append((angle, t))
-            self.frames_calculated += 1
-        if self.frames_calculated >= self.properties["tracking_frames"]:
+            if len(self.angles) > self.properties["tracking_frames"]:
+                self.angles.pop(0)
+        if len(self.angles) >= self.properties["tracking_frames"]:
             speed = self.calculate_rotational_velocity(self.angles)
             target_arm = self.angles[-1][0]
             target_angle = np.radians(target_arm + speed * self.properties["seconds_ahead"])
             target_point = (
                 image.shape[0] * self.properties["arm_length"] * np.sin(target_angle) + image.shape[0] / 2,
                 image.shape[0] * self.properties["arm_length"] * -np.cos(target_angle) + image.shape[1] / 2)
-            self.frames_calculated = 0
-            self.angles = []
             return target_point
         else:
             return None
