@@ -1,0 +1,6 @@
+{
+  "camera_fov_x": 90,
+  "camera_fov_y": 90,
+  "accuracy_cutoff": 3,
+  "firing_velocity": 1
+}
