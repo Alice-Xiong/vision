@@ -1,0 +1,22 @@
+source.rune.predict\_target.assign\_panels package
+==================================================
+
+Submodules
+----------
+
+source.rune.predict\_target.assign\_panels.assign\_panels module
+----------------------------------------------------------------
+
+.. automodule:: source.rune.predict_target.assign_panels.assign_panels
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: source.rune.predict_target.assign_panels
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,29 @@
+source.panel\_predictor package
+===============================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   source.panel_predictor.panel_finder
+
+Submodules
+----------
+
+source.panel\_predictor.panel\_predictor module
+-----------------------------------------------
+
+.. automodule:: source.panel_predictor.panel_predictor
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: source.panel_predictor
+   :members:
+   :undoc-members:
+   :show-inheritance:

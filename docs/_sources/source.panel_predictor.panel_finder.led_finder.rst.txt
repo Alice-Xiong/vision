@@ -1,0 +1,30 @@
+source.panel\_predictor.panel\_finder.led\_finder package
+=========================================================
+
+Submodules
+----------
+
+source.panel\_predictor.panel\_finder.led\_finder.led\_finder module
+--------------------------------------------------------------------
+
+.. automodule:: source.panel_predictor.panel_finder.led_finder.led_finder
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+source.panel\_predictor.panel\_finder.led\_finder.match\_leds module
+--------------------------------------------------------------------
+
+.. automodule:: source.panel_predictor.panel_finder.led_finder.match_leds
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: source.panel_predictor.panel_finder.led_finder
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,40 @@
+source package
+==============
+
+Subpackages
+-----------
+
+.. toctree::
+
+   source.gimbal
+   source.panel_predictor
+   source.rune
+   source.uart
+
+Submodules
+----------
+
+source.instance module
+----------------------
+
+.. automodule:: source.instance
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+source.module module
+--------------------
+
+.. automodule:: source.module
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: source
+   :members:
+   :undoc-members:
+   :show-inheritance:
