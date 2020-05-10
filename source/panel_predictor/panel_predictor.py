@@ -16,6 +16,7 @@ class PanelPredictor(Module):
     def process(self, frame):
         """
         predicts where the center of the panel will be
+
         :param frame: an image that may contain a robot
         :return: ((x,y), confidence)  coordinates of panel and confidence it will be there
         """

@@ -1,0 +1,323 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Quick Start &mdash; UBC RoboMaster Vision Repository 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="main and utility modules" href="main.html" />
+    <link rel="prev" title="Welcome to UBC RoboMaster Vision’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> UBC RoboMaster Vision Repository
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quick Start</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#armour-panel-detection">Armour Panel Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#run-time-arguments">Run-time arguments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example-run-on-raspberry-pi-with-usb-webcam-without-display">Example: run on raspberry pi with USB webcam without display</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#training-the-model-with-keras-tensorflow-2-0-and-performing-inference-of-the-model">Training the model with Keras + Tensorflow 2.0 and performing inference of the model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#set-up-the-virtual-environment">Set-up the virtual environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#training">Training</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#inference">Inference</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#converting-the-keras-model-to-a-frozen-tensorflow-graph">Converting the Keras model to a frozen Tensorflow graph</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#set-up-tensorflow-1-14-virtual-environment">Set up Tensorflow 1.14 virtual environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#convert">Convert</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#inference-laptop-or-raspberry-pi">Inference (Laptop or Raspberry Pi)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#virtual-environments">Virtual Environments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Inference</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="main.html">main and utility modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gimbal.html">gimbal package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="panel_predictor.html">panel_predictor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rune.html">rune package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="uart.html">uart package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">UBC RoboMaster Vision Repository</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Quick Start</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/quickstart.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="quick-start">
+<h1>Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="armour-panel-detection">
+<h2>Armour Panel Detection<a class="headerlink" href="#armour-panel-detection" title="Permalink to this headline">¶</a></h2>
+<p>This approach uses a pipeline of computer vision and machine learning
+algorithms to detect the center of the panels. The general algorithm
+goes as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">Preprocess</span> <span class="n">Image</span>
+<span class="mf">2.</span> <span class="n">Bitmask</span> <span class="n">LEDs</span>
+<span class="mf">4.</span> <span class="n">Match</span> <span class="n">target</span> <span class="n">LEDs</span>
+<span class="mf">5.</span> <span class="n">Compute</span> <span class="n">center</span> <span class="n">of</span> <span class="n">panel</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="run-time-arguments">
+<h2>Run-time arguments<a class="headerlink" href="#run-time-arguments" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-c&#39;</span><span class="p">,</span> <span class="s2">&quot;--camera&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;webcam&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Which camera to use, e.g. raspberry, webcam&quot;</span><span class="p">)</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-i&#39;</span><span class="p">,</span> <span class="s1">&#39;--framework&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;opencv&quot;</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Specifies which framework to use as inference, e.g. opencv, tensorflow&quot;</span><span class="p">)</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;-s&#39;</span><span class="p">,</span> <span class="s1">&#39;--show&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">bool</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Conditonal for displaying frame&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="example-run-on-raspberry-pi-with-usb-webcam-without-display">
+<h3>Example: run on raspberry pi with USB webcam without display<a class="headerlink" href="#example-run-on-raspberry-pi-with-usb-webcam-without-display" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">source</span> <span class="o">-</span><span class="n">i</span> <span class="n">opencv</span> <span class="o">-</span><span class="n">s</span> <span class="n">false</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="training-the-model-with-keras-tensorflow-2-0-and-performing-inference-of-the-model">
+<h2>Training the model with Keras + Tensorflow 2.0 and performing inference of the model<a class="headerlink" href="#training-the-model-with-keras-tensorflow-2-0-and-performing-inference-of-the-model" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="set-up-the-virtual-environment">
+<h3>Set-up the virtual environment<a class="headerlink" href="#set-up-the-virtual-environment" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">vision</span>
+<span class="n">virtualenv</span> <span class="o">-</span><span class="n">p</span> <span class="n">python3</span> <span class="n">venv</span>
+<span class="n">source</span> <span class="n">venv</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">/</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="training">
+<h3>Training<a class="headerlink" href="#training" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">vision</span><span class="o">/</span><span class="n">source</span><span class="o">/</span><span class="n">panel_predictor</span><span class="o">/</span><span class="n">panel_finder</span><span class="o">/</span>
+<span class="n">python</span> <span class="n">panel_classifier</span><span class="o">/</span> <span class="o">--</span><span class="n">mode</span> <span class="n">train</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="inference">
+<h3>Inference<a class="headerlink" href="#inference" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">vision</span><span class="o">/</span><span class="n">source</span><span class="o">/</span><span class="n">panel_predictor</span>
+<span class="n">python</span> <span class="n">panel_finder</span> <span class="o">--</span><span class="n">mode</span> <span class="p">{</span><span class="n">video</span><span class="o">/</span><span class="n">webcam</span><span class="p">}</span> <span class="o">--</span><span class="n">video</span> <span class="p">{</span><span class="n">video_path</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="converting-the-keras-model-to-a-frozen-tensorflow-graph">
+<h2>Converting the Keras model to a frozen Tensorflow graph<a class="headerlink" href="#converting-the-keras-model-to-a-frozen-tensorflow-graph" title="Permalink to this headline">¶</a></h2>
+<p><em>Tensorflow 2.0 has no longer supports the freezing of tensorflow graphs
+to .pb files. We need to downgrade in order to do this if we want to use
+OpenCV DNN</em></p>
+<div class="section" id="set-up-tensorflow-1-14-virtual-environment">
+<h3>Set up Tensorflow 1.14 virtual environment<a class="headerlink" href="#set-up-tensorflow-1-14-virtual-environment" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">vision</span><span class="o">/</span><span class="n">requirements</span>
+<span class="n">virtualenv</span> <span class="o">-</span><span class="n">p</span> <span class="n">python3</span> <span class="n">tf114</span>
+<span class="n">source</span> <span class="n">tf114</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">requirements_convert</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="convert">
+<h3>Convert<a class="headerlink" href="#convert" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">source</span><span class="o">/</span><span class="n">panel_predictor</span><span class="o">/</span><span class="n">panel_finder</span><span class="o">/</span>
+<span class="n">python</span> <span class="n">panel_classifier</span><span class="o">/</span> <span class="o">--</span><span class="n">mode</span> <span class="n">convert</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="inference-laptop-or-raspberry-pi">
+<h2>Inference (Laptop or Raspberry Pi)<a class="headerlink" href="#inference-laptop-or-raspberry-pi" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="virtual-environments">
+<h3>Virtual Environments<a class="headerlink" href="#virtual-environments" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>For Raspberry Pi follow the guide in the raspberrypi_setup directory</p></li>
+<li><p>For laptops you can the <em>venv</em> virtual environment</p></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h3>Inference<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">vision</span><span class="o">/</span><span class="n">source</span><span class="o">/</span><span class="n">panel_predictor</span>
+<span class="n">python</span> <span class="n">panel_finder</span><span class="o">/</span> <span class="o">--</span><span class="n">mode</span> <span class="p">{</span><span class="n">video</span><span class="o">/</span><span class="n">webcam</span><span class="p">}</span> <span class="o">--</span><span class="n">vide</span> <span class="p">{</span><span class="n">video_path</span><span class="p">}</span> <span class="o">--</span><span class="n">framework</span> <span class="n">opencv</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="main.html" class="btn btn-neutral float-right" title="main and utility modules" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to UBC RoboMaster Vision’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, P. Amani, C. Cahoon, S. Gonzalez, J. Marangoni, J. Ross, V. Vakilian
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

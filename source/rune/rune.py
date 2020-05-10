@@ -16,6 +16,7 @@ class Rune(Module):
     def process(self, frame):
         """
         predicts where the rune target will be
+        
         :param frame: an image containing the power rune
         :return: None or (x,y) of the prediction
         """

@@ -1,0 +1,22 @@
+source.uart package
+===================
+
+Submodules
+----------
+
+source.uart.uart module
+-----------------------
+
+.. automodule:: source.uart.uart
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: source.uart
+   :members:
+   :undoc-members:
+   :show-inheritance:

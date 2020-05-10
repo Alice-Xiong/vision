@@ -1,0 +1,29 @@
+source.rune.predict\_target package
+===================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   source.rune.predict_target.assign_panels
+
+Submodules
+----------
+
+source.rune.predict\_target.predict\_target module
+--------------------------------------------------
+
+.. automodule:: source.rune.predict_target.predict_target
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: source.rune.predict_target
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,22 @@
+source.rune.preprocess\_rune package
+====================================
+
+Submodules
+----------
+
+source.rune.preprocess\_rune.preprocess\_rune module
+----------------------------------------------------
+
+.. automodule:: source.rune.preprocess_rune.preprocess_rune
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: source.rune.preprocess_rune
+   :members:
+   :undoc-members:
+   :show-inheritance:

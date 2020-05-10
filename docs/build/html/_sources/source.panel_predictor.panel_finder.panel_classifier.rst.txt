@@ -1,0 +1,30 @@
+source.panel\_predictor.panel\_finder.panel\_classifier package
+===============================================================
+
+Submodules
+----------
+
+source.panel\_predictor.panel\_finder.panel\_classifier.inference\_opencv module
+--------------------------------------------------------------------------------
+
+.. automodule:: source.panel_predictor.panel_finder.panel_classifier.inference_opencv
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+source.panel\_predictor.panel\_finder.panel\_classifier.panel\_classifier module
+--------------------------------------------------------------------------------
+
+.. automodule:: source.panel_predictor.panel_finder.panel_classifier.panel_classifier
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: source.panel_predictor.panel_finder.panel_classifier
+   :members:
+   :undoc-members:
+   :show-inheritance:
